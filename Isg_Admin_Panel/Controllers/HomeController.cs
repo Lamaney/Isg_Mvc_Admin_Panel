@@ -13,9 +13,61 @@ namespace Isg_Admin_Panel.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly PageContext _context;
+        public HomeController(ILogger<HomeController> logger, PageContext context )
         {
             _logger = logger;
+            _context=context;
+        }
+
+        public IActionResult Author()
+        {
+            List<Author> list=_context.Author.ToList();
+            return View(list);
+        }
+
+        public async Task<IActionResult> AuthorDetails(int Id)
+        {
+            var author = await _context.Author.FindAsync(Id);
+            return Json(author);
+        }
+
+
+
+
+        ///Yazar eklememizi sağlayan method.
+         public async Task<IActionResult> AddAuthor(Author author)
+        {
+            if (author.Id == 0)
+            {
+                await _context.AddAsync(author);
+            }
+            else
+            {
+                _context.Update(author);
+            }
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Author));
+        }
+        
+
+        //Yazar silmemizi sağlayan method.
+        public async Task<IActionResult> DeleteAuthor(int Id)
+        {
+            
+
+            var author = await _context.Author.FindAsync(Id);
+            _context.Remove(author);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Author));
+            
+           
+        }
+
+        private IActionResult JavaScript(string script)
+        {
+            throw new NotImplementedException();
         }
 
         public IActionResult Index()

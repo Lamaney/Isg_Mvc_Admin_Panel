@@ -14422,13 +14422,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Omer\\github repos\\Isg_Mvc_Admin_Panel\\Isg_Admin_Panel\\Views\\Home\\Content.cshtml",
+      "TargetPath": "Views\\Home\\Content.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Omer\\github repos\\Isg_Mvc_Admin_Panel\\Isg_Admin_Panel\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Omer\\github repos\\Isg_Mvc_Admin_Panel\\Isg_Admin_Panel\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\Users\\Omer\\github repos\\Isg_Mvc_Admin_Panel\\Isg_Admin_Panel\\Views\\Home\\Author.cshtml",
+      "TargetPath": "Views\\Home\\Author.cshtml",
       "FileKind": "mvc"
     },
     {
