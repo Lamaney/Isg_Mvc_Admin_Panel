@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Isg_Admin_Panel.Migrations
 {
     [DbContext(typeof(PageContext))]
-    [Migration("20210508042502_first")]
+    [Migration("20210509031322_first")]
     partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -69,21 +69,6 @@ namespace Isg_Admin_Panel.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Content");
-                });
-
-            modelBuilder.Entity("Isg_Admin_Panel.Models.Legislation", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Text")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Legislation");
                 });
 #pragma warning restore 612, 618
         }

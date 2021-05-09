@@ -38,19 +38,6 @@ namespace Isg_Admin_Panel.Migrations
                 {
                     table.PrimaryKey("PK_Content", x => x.Id);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "Legislation",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Text = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Legislation", x => x.Id);
-                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -60,9 +47,6 @@ namespace Isg_Admin_Panel.Migrations
 
             migrationBuilder.DropTable(
                 name: "Content");
-
-            migrationBuilder.DropTable(
-                name: "Legislation");
         }
     }
 }

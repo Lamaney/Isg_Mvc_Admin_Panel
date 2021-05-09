@@ -11,8 +11,7 @@ namespace Isg_Admin_Panel.Models{
 
         public DbSet<Author>Author{get;set;}
 
-        public DbSet<Legislation>Legislation{get;set;}
-
+        
 
     }
 

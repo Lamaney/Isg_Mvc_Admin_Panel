@@ -68,21 +68,6 @@ namespace Isg_Admin_Panel.Migrations
 
                     b.ToTable("Content");
                 });
-
-            modelBuilder.Entity("Isg_Admin_Panel.Models.Legislation", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Text")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Legislation");
-                });
 #pragma warning restore 612, 618
         }
     }
