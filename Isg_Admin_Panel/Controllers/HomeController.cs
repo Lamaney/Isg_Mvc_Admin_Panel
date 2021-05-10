@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Isg_Admin_Panel.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace Isg_Admin_Panel.Controllers
 {
@@ -18,6 +19,21 @@ namespace Isg_Admin_Panel.Controllers
         {
             _logger = logger;
             _context=context;
+        }
+
+
+        public IActionResult Login_Controller (string Email, string Password){
+
+                var author=_context.Author.FirstOrDefault(author_info =>author_info.Email==Email && author_info.Password==Password );
+
+                if (author==null)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+
+             HttpContext.Session.SetInt32("id",author.Id);
+
+                return RedirectToAction(nameof(Author));
         }
 
         public IActionResult Author()

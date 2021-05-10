@@ -2,8 +2,21 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Admin Paneline Hoşgeldiniz</h1>
-    <br><br>
-    <img src="~/images/admin.jpg" max-width: 100%; height: auto;  alt="">
+<br><br><br>
+
+<form method="POST" action="/Home/Login_Controller" autocomplete="off" >
+
+<div class="form-group">
+    <input type="text" class="form-control" name="Email" placeholder="Email" autocomplete="off" >
 </div>
+
+
+
+<div class="form-group">
+    <input type="password" class="form-control" name="Password" placeholder="Şifre" autocomplete="off">
+</div>
+
+
+<button type="submit" class="btn btn-secondary" >Giriş</button>
+
+</form>

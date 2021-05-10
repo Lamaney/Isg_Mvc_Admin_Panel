@@ -26,7 +26,13 @@ namespace Isg_Admin_Panel
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            
+            //sql bağlantısı.
             services.AddDbContext<PageContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("ISG_DB")));
+
+            services.AddSession();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +54,8 @@ namespace Isg_Admin_Panel
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
