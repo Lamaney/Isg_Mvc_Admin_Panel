@@ -28,7 +28,7 @@ namespace Isg_Admin_Panel
             services.AddControllersWithViews();
             
             //sql bağlantısı.
-            services.AddDbContext<PageContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("ISG_DB")));
+            services.AddDbContext<BlogContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("ISG_DB")));
 
             services.AddSession();
 

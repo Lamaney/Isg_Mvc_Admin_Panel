@@ -15,6 +15,7 @@
     <title>@ViewData["Title"] - Isg_Admin_Panel</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 </head>
 <body>
     @if (id.HasValue)
@@ -38,7 +39,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Author">Yazar paneli</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Content">Gönderi Paneli</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Blog" asp-action="Index">Gönderi Paneli</a>
                         </li>
                     </ul>
                 </div>

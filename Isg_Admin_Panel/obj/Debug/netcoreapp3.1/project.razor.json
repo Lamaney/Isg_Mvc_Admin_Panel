@@ -14432,6 +14432,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Omer\\github repos\\Isg_Mvc_Admin_Panel\\Isg_Admin_Panel\\Views\\Blog\\Index.cshtml",
+      "TargetPath": "Views\\Blog\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Omer\\github repos\\Isg_Mvc_Admin_Panel\\Isg_Admin_Panel\\Views\\Home\\Author.cshtml",
       "TargetPath": "Views\\Home\\Author.cshtml",
       "FileKind": "mvc"

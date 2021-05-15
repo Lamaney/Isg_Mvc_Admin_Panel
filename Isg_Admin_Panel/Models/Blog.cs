@@ -2,7 +2,7 @@ using System;
 
 namespace Isg_Admin_Panel.Models{
 
-    public class Content{
+    public class Blog{
 
         public int Id{get;set;}
 
@@ -10,14 +10,16 @@ namespace Isg_Admin_Panel.Models{
 
         public string Subtitle{get;set;}
 
-        public string Text{get;set;}
+        public string Content{get;set;}
 
         public string Image_Path{get;set;}
 
         public bool Is_Publish{get;set;}
 
 
-
+        public DateTime CreateTime { get; set; }=DateTime.Now;
+        public Author Author { get; set; }
+        public int AuthorId { get; set; }
 
 
     }

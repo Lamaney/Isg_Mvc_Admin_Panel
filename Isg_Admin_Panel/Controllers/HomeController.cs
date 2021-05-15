@@ -14,8 +14,8 @@ namespace Isg_Admin_Panel.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        private readonly PageContext _context;
-        public HomeController(ILogger<HomeController> logger, PageContext context )
+        private readonly BlogContext _context;
+        public HomeController(ILogger<HomeController> logger, BlogContext context )
         {
             _logger = logger;
             _context=context;

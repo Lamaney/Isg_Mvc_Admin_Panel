@@ -78,3 +78,4 @@ C:\Users\Omer\github repos\Isg_Mvc_Admin_Panel\Isg_Admin_Panel\bin\Debug\netcore
 C:\Users\Omer\github repos\Isg_Mvc_Admin_Panel\Isg_Admin_Panel\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Omer\github repos\Isg_Mvc_Admin_Panel\Isg_Admin_Panel\obj\Debug\netcoreapp3.1\Razor\Views\Home\Author.cshtml.g.cs
 C:\Users\Omer\github repos\Isg_Mvc_Admin_Panel\Isg_Admin_Panel\obj\Debug\netcoreapp3.1\Razor\Views\Home\Content.cshtml.g.cs
+C:\Users\Omer\github repos\Isg_Mvc_Admin_Panel\Isg_Admin_Panel\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Index.cshtml.g.cs
