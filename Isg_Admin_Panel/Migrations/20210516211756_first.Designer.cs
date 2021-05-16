@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Isg_Admin_Panel.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    [Migration("20210515225103_first")]
+    [Migration("20210516211756_first")]
     partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
