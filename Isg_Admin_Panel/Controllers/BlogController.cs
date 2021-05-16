@@ -8,10 +8,11 @@ using Microsoft.Extensions.Logging;
 using Isg_Admin_Panel.Models;
 using Microsoft.AspNetCore.Http;
 using System.IO;
-
+using Isg_Admin_Panel.Filter;
 
 namespace Isg_Admin_Panel.Controllers
 {
+    [UserFilter]
     public class BlogController : Controller
     {
         private readonly ILogger<BlogController> _logger;

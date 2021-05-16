@@ -8,8 +8,10 @@ using Microsoft.Extensions.Logging;
 using Isg_Admin_Panel.Models;
 using Microsoft.AspNetCore.Http;
 
+
 namespace Isg_Admin_Panel.Controllers
 {
+  
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -49,7 +51,12 @@ namespace Isg_Admin_Panel.Controllers
         }
 
 
+        public IActionResult LogOut(){
 
+            HttpContext.Session.Clear();
+            return RedirectToAction(nameof(Index));
+
+        }
 
         ///Yazar eklememizi sağlayan method.
          public async Task<IActionResult> AddAuthor(Author author)

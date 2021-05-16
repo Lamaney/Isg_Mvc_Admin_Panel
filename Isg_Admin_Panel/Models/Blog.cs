@@ -13,6 +13,8 @@ namespace Isg_Admin_Panel.Models{
         public string Content{get;set;}
 
         
+
+        
         public bool Is_Publish{get;set;}
 
 
