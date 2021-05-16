@@ -72,7 +72,7 @@ namespace Isg_Admin_Panel.Controllers
         public async Task<IActionResult> DeleteAuthor(int Id)
         {
             
-
+            
             var author = await _context.Author.FindAsync(Id);
             _context.Remove(author);
             await _context.SaveChangesAsync();

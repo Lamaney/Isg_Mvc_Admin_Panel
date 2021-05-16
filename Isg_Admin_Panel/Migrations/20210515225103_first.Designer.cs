@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Isg_Admin_Panel.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    [Migration("20210511145102_first")]
+    [Migration("20210515225103_first")]
     partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -60,9 +60,6 @@ namespace Isg_Admin_Panel.Migrations
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Image_Path")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Is_Publish")
                         .HasColumnType("bit");

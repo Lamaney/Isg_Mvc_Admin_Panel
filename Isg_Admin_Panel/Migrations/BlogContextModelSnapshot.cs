@@ -59,9 +59,6 @@ namespace Isg_Admin_Panel.Migrations
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Image_Path")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("Is_Publish")
                         .HasColumnType("bit");
 
