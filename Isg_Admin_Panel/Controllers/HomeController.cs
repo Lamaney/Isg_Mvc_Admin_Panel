@@ -23,7 +23,7 @@ namespace Isg_Admin_Panel.Controllers
             _context=context;
         }
 
-
+        //Yazarların girişlerini denetleyen method.
         public IActionResult Login_Controller (string Email, string Password){
 
                 var author=_context.Author.FirstOrDefault(author_info =>author_info.Email==Email && author_info.Password==Password );
@@ -38,19 +38,21 @@ namespace Isg_Admin_Panel.Controllers
                 return RedirectToAction(nameof(Author));
         }
 
+        //yazarları listeleyip görüntülememizi sağlayan method.
         public IActionResult Author()
         {
             List<Author> list=_context.Author.ToList();
             return View(list);
         }
 
+        //Yazarların detaylarını çekip json olarak geri döndürmemizi sağlayan method.
         public async Task<IActionResult> AuthorDetails(int Id)
         {
             var author = await _context.Author.FindAsync(Id);
             return Json(author);
         }
 
-
+        //Sesionu temizleyip yazarların çıkışını sağlayan method.
         public IActionResult LogOut(){
 
             HttpContext.Session.Clear();

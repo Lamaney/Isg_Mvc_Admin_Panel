@@ -12,6 +12,7 @@ using Isg_Admin_Panel.Filter;
 
 namespace Isg_Admin_Panel.Controllers
 {
+    //Çıkış yapıldığında tekrardan izinsiz erişimlerin oluşmaması için oluşturulan classın bağlantısı.
     [UserFilter]
     public class BlogController : Controller
     {
@@ -28,18 +29,6 @@ namespace Isg_Admin_Panel.Controllers
 
             if (model!=null)
             {
-                // var file=Request.Form.Files.First();
-                // //C:\Users\Omer\github repos\Isg_Mvc_Admin_Panel\Isg_Admin_Panel\wwwroot
-                // string savePath=Path.Combine("C:","Users","Omer","github repos","Isg_Mvc_Admin_Panel","Isg_Admin_Panel","wwwroot","img");
-                
-                // var fileName=$"{DateTime.Now:MMddHHmmss}.{file.FileName.Split(".").Last()}";
-                // var fileUrl=Path.Combine(savePath,fileName);
-                
-                // using(var filestream=new FileStream(fileUrl,FileMode.Create)){
-                //     await file.CopyToAsync(filestream);
-                // }
-
-                // model.Image_Path=fileName;
                
                 model.AuthorId=(int)HttpContext.Session.GetInt32("id");
 
@@ -85,6 +74,15 @@ namespace Isg_Admin_Panel.Controllers
             return RedirectToAction(nameof(Index));
         }
        
+    public IActionResult UnPublish(int Id)
+        {
+            var blog=_context.Blog.Find(Id);
+            blog.Is_Publish=false;
+            _context.Update(blog);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
